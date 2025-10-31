@@ -12,3 +12,15 @@ CREATE INDEX booking_id_index ON Booking(booking_id);
 
 EXPLAIN SELECT * FROM Booking WHERE booking_id = '...';
 EXPLAIN SELECT * FROM Property WHERE location = '...';
+
+ANALYZE Booking;
+ANALYZE Property;
+ANALYZE User;
+
+EXPLAIN ANALYZE SELECT * FROM Booking WHERE booking_id = '123e4567-e89b-12d3-a456-426614174000';
+
+EXPLAIN ANALYZE SELECT * FROM Property WHERE location = 'Casablanca';
+
+SET enable_seqscan = OFF;
+EXPLAIN ANALYZE SELECT * FROM Booking WHERE booking_id = '...';
+SET enable_seqscan = ON;
