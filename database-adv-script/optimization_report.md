@@ -76,4 +76,3 @@ This optimization significantly improves query performance and readability. Furt
 - Materialized views for frequent joins
 - Partitioning large tables
 - Caching strategies for high-traffic endpoints
-```
